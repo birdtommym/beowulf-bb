@@ -1,0 +1,12 @@
+# render.yaml
+services:
+  - type: web
+    name: beowulf-streamlit
+    env: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: BEOWULF_PROFILE
+        value: mobile       # or desktop
+      - key: BB_PASSCODE
+        value: letmein      # optional simple gate
