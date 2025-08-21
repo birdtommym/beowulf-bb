@@ -11,5 +11,7 @@ RUN python beowulf_bootstrap_v2.py
 RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 10000
-CMD ["bash","-lc","streamlit run beowulf_app/app.py --server.port ${PORT:-10000} --server.headless true"]
+CMD ["bash","-lc","streamlit run beowulf_app/app.py --server.port ${PORT:-10000} --server.baseUrlPath /app/ --server.headless true"]
+
+
 
