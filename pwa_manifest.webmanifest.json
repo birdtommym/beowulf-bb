@@ -1,0 +1,11 @@
+{
+  "name": "Beowulf Biostatistics",
+  "short_name": "Beowulf",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#10b981",
+  "icons": []
+}

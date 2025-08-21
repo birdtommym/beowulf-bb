@@ -1,0 +1,12 @@
+:root { --bb:#10b981; --fg:#111827; --muted:#6b7280; --bg:#ffffff; }
+html,body { margin:0; padding:0; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif; }
+.shell { min-height: 100vh; display:flex; align-items:center; justify-content:center; padding: 24px; }
+.splash { text-align:center; }
+h1 { margin:.75rem 0 .25rem; font-weight:800; letter-spacing:-.01em; }
+.sub { color:var(--muted); margin:0 0 1rem; }
+.actions { display:flex; gap:.75rem; align-items:center; justify-content:center; flex-wrap:wrap; }
+button, .link { border-radius:12px; padding:.6rem 1rem; border:1px solid var(--bb); }
+button { background:var(--bb); color:#fff; border:none; }
+.link { text-decoration:none; color:var(--bb); }
+@media (display-mode: standalone) { .actions .link { display:none; } }
