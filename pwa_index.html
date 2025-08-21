@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#10b981" />
+  <title>Beowulf Biostatistics</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+  <main class="shell">
+    <div class="splash">
+      <h1>Beowulf Biostatistics</h1>
+      <p class="sub">Installable preview. Tap “Open App” to launch.</p>
+      <div class="actions">
+        <button id="installBtn" hidden>Install</button>
+        <a class="link" href="/app/">Open App</a>
+      </div>
+    </div>
+  </main>
+  <script src="/assets/install.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js', { scope: '/' })
+        .catch(console.error)
+        .finally(() => setTimeout(() => { if (!location.hash.includes('stay')) location.assign('/app/'); }, 600));
+    } else {
+      setTimeout(() => location.assign('/app/'), 100);
+    }
+  </script>
+</body>
+</html>
